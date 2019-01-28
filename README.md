@@ -4,7 +4,7 @@ Have you ever been annoyed that RSForms will not let you modify the order of inp
 
 RSForm puts the input inside the label, which some say it's "the proper way to do it". I prefer my checkboxes styled, and if you do it right with the rest of your code, no accessibility is lost.
 
-Anyway, when creating a new form, just put this code below in the form at "Properties" > "PHP Scripts" > "Scripts Called on Form Display" and you will be set for good.
+Anyway, when creating a new form, just put this code below in the form at "Properties" > "PHP Scripts" > "Scripts Called on Form Display" and you will be set for good. It works for both radio buttons and checkboxes.
 
 ```php
 $formLayout = preg_replace('/(<label.*?>)(<input.*?>)(.*?)(<\/label>)/i', '$2$1$3$4', $formLayout);
